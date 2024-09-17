@@ -1,11 +1,11 @@
-import Image from "next/image";
+import { NavbarComponent } from "@/app/components/ui/NavBar";
+
 
 export default function Home() {
   return (
     <div className="bg-white dark:bg-black">
-     <div>
-      <p className="p-4 font-mono"> Welcome</p>
-     </div>
+      <NavbarComponent/>
+  
     </div>
   );
 }
