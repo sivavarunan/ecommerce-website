@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
+// Reusing the transition for animations
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -13,6 +14,7 @@ const transition = {
   restSpeed: 0.001,
 };
 
+// MenuItem Component
 export const MenuItem = ({
   setActive,
   active,
@@ -25,7 +27,7 @@ export const MenuItem = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
@@ -60,6 +62,7 @@ export const MenuItem = ({
   );
 };
 
+// Menu Component with Logo and Login Button
 export const Menu = ({
   setActive,
   children,
@@ -69,14 +72,29 @@ export const Menu = ({
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative  dark:bg-neutral-800 bg-white shadow-input flex justify-center space-x-4 px-10 py-3 rounded-full"
+      onMouseLeave={() => setActive(null)}
+      className="relative dark:bg-neutral-800 bg-white shadow-input flex items-center justify-between space-x-4 px-10 py-3 rounded-full"
     >
-      {children}
+      {/* Logo */}
+      <Link href="/" className="flex-shrink-0">
+        <Image src="/logo.png" width={50} height={50} alt="Logo" className="rounded-full" />
+      </Link>
+
+      {/* Menu items */}
+      <div className="flex justify-center space-x-4">{children}</div>
+
+      {/* Login Button */}
+      <Link
+        href="/login"
+        className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all"
+      >
+        Login
+      </Link>
     </nav>
   );
 };
 
+// ProductItem Component
 export const ProductItem = ({
   title,
   description,
@@ -109,11 +127,12 @@ export const ProductItem = ({
   );
 };
 
+// HoveredLink Component
 export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+      className="text-neutral-700 dark:text-neutral-200 hover:text-black"
     >
       {children}
     </Link>

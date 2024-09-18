@@ -1,11 +1,11 @@
-import { NavbarComponent } from "@/app/components/ui/NavBar";
+import HomePage from "./pages/MainPage/page";
+
 
 
 export default function Home() {
   return (
     <div className="bg-white dark:bg-black">
-      <NavbarComponent/>
-  
+    <HomePage/>
     </div>
   );
 }
