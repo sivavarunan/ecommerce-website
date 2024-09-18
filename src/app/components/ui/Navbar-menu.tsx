@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { FaShoppingCart, FaSearch } from "react-icons/fa"; // Import icons
 
 // Reusing the transition for animations
 const transition = {
@@ -70,26 +71,57 @@ export const Menu = ({
   setActive: (item: string | null) => void;
   children: React.ReactNode;
 }) => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative dark:bg-neutral-800 bg-white shadow-input flex items-center justify-between space-x-4 px-10 py-3 rounded-full"
+      className="relative shadow-2xl shadow-cyan-800 bg-white shadow-input flex items-center justify-between px-4 py-2 rounded-full"
+      style={{ background: 'linear-gradient(to top left, rgba(0, 139, 139, 0.4), rgba(0, 255, 255, 0.4))' }}
     >
       {/* Logo */}
-      <Link href="/" className="flex-shrink-0">
-        <Image src="/logo.png" width={50} height={50} alt="Logo" className="rounded-full" />
+      <Link href="/" title="Logo" className="flex items-center space-x-2 bg-white bg-opacity-80 shadow-lg rounded-md transform hover:scale-105 transition-transform px-2">
+        <div className="flex-shrink-0">
+          <Image src="/logo.png" width={50} height={50} alt="Logo" className="rounded-full" />
+        </div>
+        <span className="text-black text-sm font-medium">Logo</span>
       </Link>
 
       {/* Menu items */}
-      <div className="flex justify-center space-x-4">{children}</div>
+      <div className="flex-grow flex justify-center space-x-4">{children}</div>
 
-      {/* Login Button */}
-      <Link
-        href="/login"
-        className="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all"
-      >
-        Login
-      </Link>
+      {/* Search Bar and Cart Icon Container */}
+      <div className="flex items-center space-x-2">
+        {/* Search Bar */}
+        <div className="relative">
+          <button
+            onClick={() => setIsSearchOpen(!isSearchOpen)}
+            className="p-2 text-gray-700 dark:text-gray-300"
+          >
+            <FaSearch />
+          </button>
+          {isSearchOpen && (
+            <input
+              type="text"
+              placeholder="Search..."
+              className="absolute right-0 top-full mt-2 w-48 p-2 bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-100"
+            />
+          )}
+        </div>
+
+        {/* Cart Icon */}
+        <Link href="/cart" className="text-gray-700 dark:text-gray-300 p-2">
+          <FaShoppingCart />
+        </Link>
+
+        {/* Login Button */}
+        <Link
+          href="/login"
+          className="px-4 py-2 bg-neutral-100 text-black rounded-full hover:bg-neutral-400 transition-all"
+        >
+          Login
+        </Link>
+      </div>
     </nav>
   );
 };
