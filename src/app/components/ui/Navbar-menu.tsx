@@ -76,37 +76,46 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative shadow-2xl shadow-cyan-800 bg-white shadow-input flex items-center justify-between px-4 py-2 rounded-full"
+      className="relative flex items-center px-4 py-2 rounded-full shadow-xl shadow-cyan-950"
       style={{ background: 'linear-gradient(to top left, rgba(0, 139, 139, 0.4), rgba(0, 255, 255, 0.4))' }}
     >
       {/* Logo */}
-      <Link href="/" title="Logo" className="flex items-center space-x-2 bg-white bg-opacity-80 shadow-lg rounded-md transform hover:scale-105 transition-transform px-2">
+      <Link href="/" title="Logo" className="flex items-center space-x-2 bg-slate-400 bg-opacity-60 shadow-lg rounded-2xl transform hover:scale-105 transition-transform px-2">
         <div className="flex-shrink-0">
-          <Image src="/logo.png" width={50} height={50} alt="Logo" className="rounded-full" />
+          <Image src="/screw.png" width={32} height={32} alt="Logo" className="rounded-full py-1" />
         </div>
         <span className="text-black text-sm font-medium">Logo</span>
       </Link>
 
       {/* Menu items */}
-      <div className="flex-grow flex justify-center space-x-4">{children}</div>
+      <div
+        className={`flex-grow flex items-center ml-20 justify-center space-x-4 transition-transform duration-300 ${isSearchOpen ? 'translate-x-[-40px]' : ''}`}
+      >
+        {children}
+      </div>
 
       {/* Search Bar and Cart Icon Container */}
-      <div className="flex items-center space-x-2">
+      <div className="relative flex items-center space-x-2">
         {/* Search Bar */}
         <div className="relative">
           <button
             onClick={() => setIsSearchOpen(!isSearchOpen)}
-            className="p-2 text-gray-700 dark:text-gray-300"
+            className="p-2 text-gray-700 dark:text-gray-300 "
           >
             <FaSearch />
           </button>
-          {isSearchOpen && (
+          <motion.div
+            className={`absolute right-0 top-full mt-2 transition-transform ${isSearchOpen ? 'w-96 opacity-100' : 'w-0 opacity-0'} `}
+            initial={{ width: 0, opacity: 0 }}
+            animate={{ width: isSearchOpen ? '24rem' : '0', opacity: isSearchOpen ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <input
               type="text"
               placeholder="Search..."
-              className="absolute right-0 top-full mt-2 w-48 p-2 bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-100"
+              className="w-full p-2 right-8 bg-white bg-opacity-10 absolute bottom-1 rounded-full border-transparent focus:border-cyan-600 shadow-lg"
             />
-          )}
+          </motion.div>
         </div>
 
         {/* Cart Icon */}
