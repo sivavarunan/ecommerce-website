@@ -46,7 +46,7 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-cyan-300 bg-opacity-30 dark:bg-cyan-900 dark:bg-opacity-30 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
                 <motion.div
                   layout // layout ensures smooth animation
@@ -76,11 +76,11 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative flex items-center px-4 py-2 rounded-full shadow-xl shadow-cyan-950"
+      className="relative flex items-center px-4 py-2 rounded-full shadow-xl shadow-cyan-950 "
       style={{ background: 'linear-gradient(to top left, rgba(0, 139, 139, 0.4), rgba(0, 255, 255, 0.4))' }}
     >
       {/* Logo */}
-      <Link href="/" title="Logo" className="flex items-center space-x-2 bg-slate-400 bg-opacity-60 shadow-lg rounded-2xl transform hover:scale-105 transition-transform px-2">
+      <Link href="/" title="Logo" className="flex items-center space-x-2 bg-slate-500 bg-opacity-60 shadow-lg rounded-2xl transform hover:scale-105 transition-transform px-2">
         <div className="flex-shrink-0">
           <Image src="/screw.png" width={32} height={32} alt="Logo" className="rounded-full py-1" />
         </div>
@@ -100,7 +100,7 @@ export const Menu = ({
         <div className="relative">
           <button
             onClick={() => setIsSearchOpen(!isSearchOpen)}
-            className="p-2 text-gray-700 dark:text-gray-300 "
+            className="p-2 text-gray-700 dark:text-gray-300 hover:text-cyan-400 "
           >
             <FaSearch />
           </button>
@@ -119,14 +119,14 @@ export const Menu = ({
         </div>
 
         {/* Cart Icon */}
-        <Link href="/cart" className="text-gray-700 dark:text-gray-300 p-2">
+        <Link href="/cart" className="text-gray-700 dark:text-gray-300 hover:text-cyan-400 p-2">
           <FaShoppingCart />
         </Link>
 
         {/* Login Button */}
         <Link
           href="/login"
-          className="px-4 py-2 bg-neutral-100 text-black rounded-full hover:bg-neutral-400 transition-all"
+          className="px-4 py-1 bg-neutral-300 text-black rounded-full hover:bg-cyan-800 transition-all"
         >
           Login
         </Link>
