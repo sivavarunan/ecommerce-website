@@ -4,6 +4,7 @@ import Link from "next/link";
 import { NavbarComponent } from "@/app/components/ui/NavBar";
 import { motion } from "framer-motion";
 import { LampContainer } from "@/app/components/ui/lamp";
+import HeroSection from "./heroSection";
 
 const HomePage = () => {
     return (
@@ -30,6 +31,9 @@ const HomePage = () => {
                         </Link>
                 </motion.div>
             </LampContainer>
+            <div>
+                <HeroSection/>
+            </div>
         </div >
     );
 }
