@@ -80,7 +80,7 @@ export const Menu = ({
       style={{ background: 'linear-gradient(to top left, rgba(0, 139, 139, 0.4), rgba(0, 255, 255, 0.4))' }}
     >
       {/* Logo */}
-      <Link href="/" title="Logo" className="flex items-center space-x-2 bg-slate-500 bg-opacity-60 shadow-lg rounded-2xl transform hover:scale-105 transition-transform px-2">
+      <Link href="/" title="Logo" className="flex items-center space-x-2 bg-neutral-500 hover:bg-cyan-800 bg-opacity-60 shadow-lg rounded-2xl transform hover:scale-105 transition-transform px-2">
         <div className="flex-shrink-0">
           <Image src="/screw.png" width={32} height={32} alt="Logo" className="rounded-full py-1" />
         </div>

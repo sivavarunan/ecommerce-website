@@ -5,6 +5,7 @@ import { NavbarComponent } from "@/app/components/ui/NavBar";
 import { motion } from "framer-motion";
 import { LampContainer } from "@/app/components/ui/lamp";
 import HeroSection from "./heroSection";
+import Section2 from "./section2";
 
 const HomePage = () => {
     return (
@@ -33,6 +34,9 @@ const HomePage = () => {
             </LampContainer>
             <div>
                 <HeroSection/>
+            </div>
+            <div>
+                <Section2/>
             </div>
         </div >
     );
