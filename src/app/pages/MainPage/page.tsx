@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { LampContainer } from "@/app/components/ui/lamp";
 import HeroSection from "./heroSection";
 import Section2 from "./section2";
+import Section3 from "./Section3";
 
 const HomePage = () => {
     return (
@@ -37,6 +38,9 @@ const HomePage = () => {
             </div>
             <div>
                 <Section2/>
+            </div>
+            <div>
+                <Section3/>
             </div>
         </div >
     );
