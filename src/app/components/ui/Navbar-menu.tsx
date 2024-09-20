@@ -76,7 +76,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative flex items-center px-4 py-2 rounded-full shadow-xl shadow-cyan-950 "
+      className="relative flex items-center px-4 py-3 rounded-full shadow-xl shadow-cyan-950 "
       style={{ background: 'linear-gradient(to top left, rgba(0, 139, 139, 0.4), rgba(0, 255, 255, 0.4))' }}
     >
       {/* Logo */}
