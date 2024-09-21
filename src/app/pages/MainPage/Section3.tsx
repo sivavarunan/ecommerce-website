@@ -1,13 +1,51 @@
 import React from "react";
+import { FiTruck, FiCreditCard, FiHeadphones } from "react-icons/fi"; 
+
+const services = [
+  {
+    id: 1,
+    title: "Fast Delivery",
+    description: "We provide swift and reliable delivery services to ensure your products reach you on time.",
+    icon: <FiTruck className="w-12 h-12 text-slate-500" />,
+  },
+  {
+    id: 2,
+    title: "Secure Payment",
+    description: "All transactions are encrypted and secure for your peace of mind.",
+    icon: <FiCreditCard className="w-12 h-12 text-slate-500" />,
+  },
+  {
+    id: 3,
+    title: "24/7 Customer Support",
+    description: "Our support team is available around the clock to assist you with any issues or questions.",
+    icon: <FiHeadphones className="w-12 h-12 text-slate-500" />,
+  },
+];
 
 const Section3 = () => {
-    return(
-        <div className="bg-gradient-to-b from-slate-800 via-slate-700 to-slate-700 h-screen flex items-center justify-center">
-            <h1 className="text-slate-500 text-5xl font-bold">
-                Welcome to the 3rd Section
-            </h1>
+  return (
+    <div className="bg-gradient-to-b from-slate-800 via-slate-700 to-slate-700 h-screen flex flex-col items-center justify-center space-y-12 p-8">
+      {services.map((service, index) => (
+        <div
+          key={service.id}
+          className={`flex flex-col md:flex-row items-center ${
+            index % 2 === 0 ? "md:flex-row-reverse" : ""
+          } justify-between w-full max-w-6xl p-8 bg-slate-900 bg-opacity-60 rounded-xl shadow-lg`}
+        >
+          {/* Icon */}
+          <div className="mb-4 md:mb-0">
+            {service.icon}
+          </div>
+
+          {/* Text content */}
+          <div className={`md:${index % 2 === 0 ? "text-right" : "text-left"} text-center md:text-${index % 2 === 0 ? 'right' : 'left'}`}>
+            <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+            <p className="text-slate-400 mt-2">{service.description}</p>
+          </div>
         </div>
-    );
-}
+      ))}
+    </div>
+  );
+};
 
 export default Section3;
