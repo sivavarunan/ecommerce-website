@@ -3,9 +3,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { FaShoppingCart, FaSearch } from "react-icons/fa"; // Import icons
+import { FaShoppingCart, FaSearch } from "react-icons/fa"; 
 
-// Reusing the transition for animations
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -15,7 +14,6 @@ const transition = {
   restSpeed: 0.001,
 };
 
-// MenuItem Component
 export const MenuItem = ({
   setActive,
   active,
