@@ -25,12 +25,12 @@ const services = [
 const Section3 = () => {
   return (
     <div className="bg-slate-800">
-      <div className="pt-20">
-      <h1 className="text-4xl font-semibold font-mono text-white p-8 ml-24 ">
-        Services
-      </h1>
+      <div className="pt-12 pb-4">
+        <h1 className="text-4xl  font-semibold font-mono text-white p-4 ml-24">
+          Services
+        </h1>
       </div>
-      <div className="bg-gradient-to-b from-slate-800 via-slate-700 to-slate-700 h-screen flex flex-col items-center justify-center space-y-12 px-8">
+      <div className="bg-slate-800 flex flex-col items-center justify-center space-y-8 px-8 h-[70vh]">
         {services.map((service, index) => (
           <div
             key={service.id}
@@ -43,7 +43,7 @@ const Section3 = () => {
             </div>
 
             {/* Text content */}
-            <div className={`md:${index % 2 === 0 ? "text-right" : "text-left"} text-center md:text-${index % 2 === 0 ? 'right' : 'left'}`}>
+            <div className={`text-center md:text-${index % 2 === 0 ? 'right' : 'left'}`}>
               <h3 className="text-2xl font-bold text-white">{service.title}</h3>
               <p className="text-slate-400 mt-2">{service.description}</p>
             </div>
