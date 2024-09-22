@@ -15,8 +15,8 @@ export function ImageSliderComp() {
 
 
 return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-900 h-screen flex items-center justify-center">
-        <ImagesSlider className="" images={images}>
+    <div className="bg-transparent h-screen flex items-center justify-center p-16">
+        <ImagesSlider className="rounded-3xl border-4 border-cyan-950 w-5/6" images={images}>
             <motion.div
                 initial={{
                     opacity: 0,
@@ -32,7 +32,7 @@ return (
                 className="z-50 flex flex-col justify-center items-center"
             >
                 <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-                    The hero  <br /> section
+                    All the  <br /> Games
                 </motion.p>
                 <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
                     <span>Shop →</span>
