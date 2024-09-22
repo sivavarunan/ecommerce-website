@@ -6,6 +6,9 @@ import Section3 from "./Section3";
 import { ImageSliderComp } from "./heroSection";
 // import Section1 from "./section1";
 import MainSection from "./MainSection";
+import Section4 from "./section4";
+import Section5 from "./section5";
+import Footer from "@/app/footer";
 
 const HomePage = () => {
     return (
@@ -24,6 +27,15 @@ const HomePage = () => {
             </div>
             <div>
                 <Section3 />
+            </div>
+            <div>
+                <Section4 />
+            </div>
+            <div>
+                <Section5 />
+            </div>
+            <div>
+                <Footer />
             </div>
         </div >
     );
