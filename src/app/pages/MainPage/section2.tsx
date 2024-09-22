@@ -54,8 +54,8 @@ const Section2 = () => {
   ];
 
   return (
-    <div>
-      <h1 className="text-4xl font-semibold font-mono text-white p-8 ml-24">
+    <div className="">
+      <h1 className="text-4xl font-semibold font-mono text-white p-8 ml-24 ">
         STORE
       </h1>
       <div className="bg-gradient-to-t from-slate-800 via-slate-900 to-slate-950 h-screen flex items-center justify-center">
