@@ -55,11 +55,11 @@ const Section2 = () => {
 
   return (
     <div className="">
-      <h1 className="text-4xl font-semibold font-mono text-white p-8 ml-24 ">
+      {/* Adjust the margin and padding for reduced space */}
+      <h1 className="text-4xl font-semibold font-mono text-white pt-8 pb-4 ml-24">
         STORE
       </h1>
       <div className="bg-gradient-to-t from-slate-800 via-slate-900 to-slate-950 h-screen flex items-center justify-center">
-
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex">
           {/* Sidebar */}
           <div className="w-1/4 h-full text-white p-12">
