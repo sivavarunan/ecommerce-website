@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { FaShoppingCart, FaSearch } from "react-icons/fa"; 
+import { FaShoppingCart, FaSearch } from "react-icons/fa";
 
 const transition = {
   type: "spring",
@@ -44,7 +44,7 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="bg-cyan-300 bg-opacity-30 dark:bg-cyan-900 dark:bg-opacity-30 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-cyan-300 bg-opacity-30 dark:bg-gradient-to-b from-cyan-700 via-cyan-800 to-cyan-950 backdrop-blur-lg rounded-2xl overflow-hidden  shadow-xl"
               >
                 <motion.div
                   layout // layout ensures smooth animation
@@ -55,6 +55,7 @@ export const MenuItem = ({
               </motion.div>
             </div>
           )}
+
         </motion.div>
       )}
     </div>
@@ -74,7 +75,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative flex items-center px-4 py-3 rounded-full shadow-xl shadow-cyan-950 "
+      className="relative flex items-center px-4 py-3 rounded-full shadow-xl shadow-cyan-950 backdrop-blur-lg"
       style={{ background: 'linear-gradient(to top left, rgba(0, 139, 139, 0.4), rgba(0, 255, 255, 0.4))' }}
     >
       {/* Logo */}

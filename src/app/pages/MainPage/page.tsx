@@ -19,6 +19,9 @@ const HomePage = () => {
             <div id="main-section">
                 <MainSection />
             </div>
+            <div id="">
+                <ImageSliderComp/>
+            </div>
             <div id="shop-section">
                 <Section2 />
             </div>
