@@ -29,28 +29,28 @@ function Navbar({ className }: { className?: string }) {
         <MenuItem setActive={setActive} active={active} item="Products">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src=""
-              description="Prepare for tech interviews like never before."
+              title="Product 1"
+              href=""
+              src="/desktop3.png"
+              description="description for product 1."
             />
             <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src=""
-              description="Production ready Tailwind css components for your next project"
+              title="Product 2"
+              href=""
+              src="/desktop2.png"
+              description="description for product 2."
             />
             <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src=""
-              description="Never write from scratch again. Go from idea to blog in minutes."
+              title="Product 3"
+              href=""
+              src="/desktop4.png"
+              description="description for product 3."
             />
             <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src=""
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              title="Product 4"
+              href=""
+              src="/desktop1.png"
+              description="description for product 4."
             />
           </div>
         </MenuItem>
