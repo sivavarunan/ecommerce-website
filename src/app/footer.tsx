@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="border-t border-slate-700 mt-8 py-4 text-center text-slate-500"></div>
         <div className="flex flex-wrap justify-between items-center mb-8">
           {/* Logo or Title */}
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
