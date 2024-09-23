@@ -13,31 +13,28 @@ import Footer from "@/app/footer";
 const HomePage = () => {
     return (
         <div>
-            <div className="">
+            <div>
                 <NavbarComponent />
             </div>
-            <div>
+            <div id="main-section">
                 <MainSection />
             </div>
-            <div>
-                <ImageSliderComp />
-            </div>
-            <div>
+            <div id="shop-section">
                 <Section2 />
             </div>
-            <div>
+            <div id="services-section">
                 <Section3 />
             </div>
-            <div>
+            <div id="about-us-section">
                 <Section4 />
             </div>
-            <div>
+            <div id="contact-section">
                 <Section5 />
             </div>
             <div>
                 <Footer />
             </div>
-        </div >
+        </div>
     );
 }
 
