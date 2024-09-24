@@ -27,7 +27,7 @@ const Section3 = () => {
     <div className="bg-slate-800 py-16">
       {/* Title */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-semibold font-mono text-white">
+        <h1 className="text-5xl font-bold font-sans tracking-tighte">
           Our Services
         </h1>
         <p className="text-slate-400 mt-4 text-lg">
