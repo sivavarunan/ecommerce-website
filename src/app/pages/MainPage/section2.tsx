@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductCard } from '@/app/components/ui/ProductCard'
+import { ProductCard } from '@/app/components/ui/ProductCard';
 
 const Section2 = () => {
   const products = [
@@ -54,40 +54,43 @@ const Section2 = () => {
   ];
 
   return (
-    <div className="">
-      {/* Adjust the margin and padding for reduced space */}
-      <h1 className="text-4xl font-semibold font-mono text-white pt-8 pb-4 ml-24">
-        STORE
-      </h1>
-      <div className="bg-gradient-to-t from-slate-800 via-slate-900 to-slate-950 h-screen flex items-center justify-center">
-        <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex">
-          {/* Sidebar */}
-          <div className="w-1/4 h-full text-white p-12">
-            <h2 className="text-3xl font-bold mb-6">Categories</h2>
-            <ul className="space-y-4">
-              <li><a href="#" className="hover:text-gray-400">Category 1</a></li>
-              <li><a href="#" className="hover:text-gray-400">Category 2</a></li>
-              <li><a href="#" className="hover:text-gray-400">Category 3</a></li>
-              <li><a href="#" className="hover:text-gray-400">Category 4</a></li>
-            </ul>
-          </div>
+    <div className="bg-gradient-to-t from-slate-800 via-slate-900 to-slate-950 min-h-screen flex flex-col">
+      {/* Heading */}
+      <div className="text-center pt-12 pb-6">
+        <h1 className="text-5xl font-bold font-sans tracking-tight">
+          STORE
+        </h1>
+        <p className="text-slate-400 mt-2">Explore our exclusive products</p>
+      </div>
 
-          {/* Product Showcase */}
-          <div className="flex-1 p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                imageSrc={product.imageSrc}
-                title={product.title}
-                description={product.description}
-                price={product.price}
-              />
-            ))}
-          </div>
+      {/* Product Showcase */}
+      <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-grow">
+        {/* Sidebar */}
+        <div className="w-1/4 h-full text-white p-12">
+          <h2 className="text-3xl font-bold mb-6">Categories</h2>
+          <ul className="space-y-4">
+            <li><a href="#" className="hover:text-gray-400">Category 1</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 2</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 3</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 4</a></li>
+          </ul>
+        </div>
+
+        {/* Products Grid */}
+        <div className="flex-1 p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              imageSrc={product.imageSrc}
+              title={product.title}
+              description={product.description}
+              price={product.price}
+            />
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Section2;
