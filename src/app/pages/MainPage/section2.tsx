@@ -58,7 +58,7 @@ const Section2 = () => {
       {/* Heading */}
       <div className="text-center pt-12 pb-6">
         <h1 className="text-5xl font-bold font-sans tracking-tight">
-          STORE
+          Store
         </h1>
         <p className="text-slate-400 mt-2">Explore our exclusive products</p>
       </div>
