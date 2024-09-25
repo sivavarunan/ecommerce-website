@@ -23,14 +23,14 @@ const Section4 = () => {
           </div>
 
           {/* About Us Text */}
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed text-slate-300">
             We are dedicated to delivering the best products and services to
             our customers. Our mission is to provide high-quality, innovative
             products while ensuring excellent customer support and fast
             delivery. With years of experience in the industry, we strive to
             meet and exceed your expectations.
           </p>
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed text-slate-300">
             Our team works hard to stay ahead of industry trends and offer the
             latest and greatest products to our customers. We value trust,
             transparency, and customer satisfaction above all else.
