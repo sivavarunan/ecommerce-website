@@ -31,7 +31,7 @@ const Footer = () => {
 
           {/* Navigation Links as List */}
           <div className="w-full lg:w-1/3 flex justify-around lg:justify-center">
-            <ul className="space-y-2 text-center lg:text-left text-slate-700">
+            <ul className="space-y-2 text-center lg:text-left text-slate-700 dark:text-slate-400">
               <li>
                 <a href="#main-section" className="hover:text-cyan-500">
                   Home
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex justify-center space-x-6 text-slate-400">
+        <div className="flex justify-center space-x-6 dark:text-slate-400 text-slate-700">
           <a href="#" className="hover:text-cyan-500">
             <FiFacebook className="w-6 h-6" />
           </a>
