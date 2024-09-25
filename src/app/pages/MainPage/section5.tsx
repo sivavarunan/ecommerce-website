@@ -1,11 +1,29 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Section5 = () => {
+  // Animation Variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+
   return (
     <div className="bg-gradient-to-t from-slate-950 via-900 to-slate-900 text-white py-16 px-8">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-12 lg:space-y-0">
         {/* Left Column: Text Content */}
-        <div className="lg:w-1/2 text-left space-y-6">
+        <motion.div
+          className="lg:w-1/2 text-left space-y-6"
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h1 className="text-5xl font-bold font-sans tracking-tight">Get In Touch</h1>
           <p className="text-lg text-slate-400 max-w-md leading-relaxed">
             We are here to assist you. Whether you have questions, suggestions, or feedback, feel free to reach out to us.
@@ -14,10 +32,16 @@ const Section5 = () => {
           <p className="text-lg text-slate-400 max-w-md leading-relaxed">
             You can also email us directly at <span className="text-cyan-500">support@company.com</span> or give us a call at <span className="text-cyan-500">+123 456 7890</span>.
           </p>
-        </div>
+        </motion.div>
 
         {/* Right Column: Contact Form */}
-        <div className="lg:w-1/2 bg-slate-800 p-10 rounded-3xl shadow-2xl shadow-cyan-700/50">
+        <motion.div
+          className="lg:w-1/2 bg-slate-800 p-10 rounded-3xl shadow-2xl shadow-cyan-700/50"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <form className="space-y-8">
             {/* Name Field */}
             <div className="relative">
@@ -74,7 +98,7 @@ const Section5 = () => {
               </button>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
