@@ -4,41 +4,58 @@ import { NavbarComponent } from "@/app/components/ui/NavBar";
 import Section2 from "./section2";
 import Section3 from "./Section3";
 import { ImageSliderComp } from "./heroSection";
-// import Section1 from "./section1";
 import MainSection from "./MainSection";
 import Section4 from "./section4";
 import Section5 from "./section5";
 import Footer from "@/app/footer";
+import { motion } from 'framer-motion';
 
 const HomePage = () => {
+    const fadeIn = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+    };
+
     return (
         <div>
             <div>
                 <NavbarComponent />
             </div>
-            <div id="main-section">
+            <motion.div
+                id="main-section"
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <MainSection />
-            </div>
-            <div id="">
-                <ImageSliderComp/>
-            </div>
-            <div id="shop-section">
+            </motion.div>
+            <motion.div
+                id=""
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <ImageSliderComp />
+            </motion.div>
+            <motion.div
+                id="shop-section"
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+            >
                 <Section2 />
-            </div>
-            <div id="services-section">
-                <Section3 />
-            </div>
-            <div id="about-us-section">
-                <Section4 />
-            </div>
-            <div id="contact-section">
+            </motion.div>
+                <Section3 /> 
+                <Section4 />   
                 <Section5 />
-            </div>
             <div>
                 <Footer />
             </div>
         </div>
     );
-}
+};
 
 export default HomePage;
