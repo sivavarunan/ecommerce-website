@@ -67,12 +67,20 @@ const Section2 = () => {
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-grow">
         {/* Sidebar */}
         <div className="w-1/4 h-full text-white p-12">
-          <h2 className="text-3xl font-bold mb-6">Categories</h2>
+          <h2 className="text-3xl font-bold my-6">Categories</h2>
           <ul className="space-y-4">
             <li><a href="#" className="hover:text-gray-400">Category 1</a></li>
             <li><a href="#" className="hover:text-gray-400">Category 2</a></li>
             <li><a href="#" className="hover:text-gray-400">Category 3</a></li>
             <li><a href="#" className="hover:text-gray-400">Category 4</a></li>
+          </ul>
+          <h2 className="text-3xl font-bold my-6">Categories</h2>
+          <ul className="space-y-4">
+            <li><a href="#" className="hover:text-gray-400">Category 1</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 2</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 3</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 4</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 5</a></li>
           </ul>
         </div>
 
