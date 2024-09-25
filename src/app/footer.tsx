@@ -3,14 +3,14 @@ import { FiFacebook, FiTwitter, FiInstagram, FiMail, FiPhone } from "react-icons
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 text-white py-12">
+    <footer className="dark:bg-slate-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="border-t border-slate-700 mt-8 py-4 text-center text-slate-500"></div>
         <div className="flex flex-wrap justify-between items-center mb-8">
           {/* Logo or Title */}
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
-            <h2 className="text-3xl font-bold font-mono">Brand</h2>
-            <p className="text-slate-400 mt-2">
+            <h2 className="text-3xl font-bold font-mono text-slate-700 dark:text-white">Brand</h2>
+            <p className="dark:text-slate-400 text-slate-700 mt-2">
               High-quality products and services delivered with care.
             </p>
           </div>
@@ -31,7 +31,7 @@ const Footer = () => {
 
           {/* Navigation Links as List */}
           <div className="w-full lg:w-1/3 flex justify-around lg:justify-center">
-            <ul className="space-y-2 text-center lg:text-left">
+            <ul className="space-y-2 text-center lg:text-left text-slate-700">
               <li>
                 <a href="#main-section" className="hover:text-cyan-500">
                   Home

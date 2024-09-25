@@ -14,7 +14,7 @@ const Section5 = () => {
   };
 
   return (
-    <div className="bg-gradient-to-t from-slate-950 via-900 to-slate-900 text-white py-16 px-8">
+    <div className="dark:bg-gradient-to-t from-slate-950 via-900 to-slate-900 text-white py-16 px-8">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-12 lg:space-y-0">
         {/* Left Column: Text Content */}
         <motion.div
@@ -24,12 +24,12 @@ const Section5 = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h1 className="text-5xl font-bold font-sans tracking-tight">Get In Touch</h1>
-          <p className="text-lg text-slate-400 max-w-md leading-relaxed">
+          <h1 className="text-5xl font-bold font-sans tracking-tight dark:text-white text-black">Get In Touch</h1>
+          <p className="text-lg dark:text-slate-400 text-slate-700 max-w-md leading-relaxed">
             We are here to assist you. Whether you have questions, suggestions, or feedback, feel free to reach out to us.
             Our team is always happy to help, and we'll get back to you as soon as we can.
           </p>
-          <p className="text-lg text-slate-400 max-w-md leading-relaxed">
+          <p className="text-lg dark:text-slate-400 text-slate-700 max-w-md leading-relaxed">
             You can also email us directly at <span className="text-cyan-500">support@company.com</span> or give us a call at <span className="text-cyan-500">+123 456 7890</span>.
           </p>
         </motion.div>

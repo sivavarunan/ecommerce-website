@@ -54,19 +54,19 @@ const Section2 = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-t from-slate-800 via-slate-900 to-slate-950 min-h-screen flex flex-col">
+    <div className="dark:bg-gradient-to-t from-slate-800 via-slate-900 to-slate-950 min-h-screen flex flex-col">
       {/* Heading */}
       <div className="text-center pt-12 pb-6">
-        <h1 className="text-5xl font-bold font-sans tracking-tight">
+        <h1 className="text-5xl font-bold font-sans tracking-tight ">
           Store
         </h1>
-        <p className="text-slate-400 mt-2">Explore our exclusive products</p>
+        <p className="dark:text-slate-400 text-slate-600 mt-2 ">Explore our exclusive products</p>
       </div>
 
       {/* Product Showcase */}
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-grow">
         {/* Sidebar */}
-        <div className="w-1/4 h-full text-white p-12">
+        <div className="w-1/4 h-full dark:text-white p-12">
           <h2 className="text-3xl font-bold my-6">Categories</h2>
           <ul className="space-y-4">
             <li><a href="#" className="hover:text-gray-400">Category 1</a></li>

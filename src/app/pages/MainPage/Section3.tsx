@@ -30,7 +30,7 @@ const Section3 = () => {
   };
 
   return (
-    <div className="bg-slate-800 py-16">
+    <div className="dark:bg-slate-800 py-16">
       {/* Title */}
       <div className="text-center mb-12">
         <motion.h1
@@ -42,7 +42,7 @@ const Section3 = () => {
           Our Services
         </motion.h1>
         <motion.p
-          className="text-slate-400 mt-4 text-lg"
+          className="dark:text-slate-400 text-slate-600 mt-4 text-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -57,7 +57,7 @@ const Section3 = () => {
           <motion.div
             key={service.id}
             className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""
-              } justify-between w-full max-w-6xl p-8 bg-slate-900 bg-opacity-60 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out`}
+              } justify-between w-full max-w-6xl p-8 bg-slate-400 dark:bg-slate-900 bg-opacity-60 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out`}
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
@@ -71,7 +71,7 @@ const Section3 = () => {
             {/* Text content */}
             <div className={`text-center md:text-${index % 2 === 0 ? "right" : "left"}`}>
               <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-              <p className="text-slate-400 mt-2">{service.description}</p>
+              <p className="text-slate-800 dark:text-slate-400 mt-2">{service.description}</p>
             </div>
           </motion.div>
         ))}
