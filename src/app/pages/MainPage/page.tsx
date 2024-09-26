@@ -48,9 +48,15 @@ const HomePage = () => {
             >
                 <Section2 />
             </motion.div>
-                <Section3 /> 
-                <Section4 />   
+            <div id="services-section">
+                <Section3 />
+            </div>
+            <div id="about-us-section">
+                <Section4 />
+            </div>
+            <div id="contact-section">
                 <Section5 />
+            </div>
             <div>
                 <Footer />
             </div>

@@ -5,10 +5,11 @@ const Footer = () => {
   return (
     <footer className="dark:bg-slate-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="border-t border-slate-700 mt-8 py-4 text-center text-slate-500"></div>
-        <div className="flex flex-wrap justify-between items-center mb-8">
+      <div className="border-t border-slate-700 mt-8 pt-4 text-center text-slate-500"></div>
+        {/* Top section with logo/title, contact info, and navigation links */}
+        <div className="flex flex-wrap justify-between items-center mb-8 space-y-8 lg:space-y-0">
           {/* Logo or Title */}
-          <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
+          <div className="w-full lg:w-1/3 text-center lg:text-left">
             <h2 className="text-3xl font-bold font-mono text-slate-700 dark:text-white">Brand</h2>
             <p className="dark:text-slate-400 text-slate-700 mt-2">
               High-quality products and services delivered with care.
@@ -16,7 +17,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="w-full lg:w-1/3 text-slate-400 pl-28">
+          <div className="w-full lg:w-1/3 flex flex-col items-center  space-y-2 text-slate-400">
             <div className="flex items-center space-x-2">
               <FiMail className="text-cyan-500" />
               <a href="mailto:support@yourbrand.com" className="hover:text-cyan-500">
@@ -29,8 +30,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation Links as List */}
-          <div className="w-full lg:w-1/3 flex justify-around lg:justify-center">
+          {/* Navigation Links */}
+          <div className="w-full lg:w-1/3 flex justify-center lg:justify-end pt-4">
             <ul className="space-y-2 text-center lg:text-left text-slate-700 dark:text-slate-400">
               <li>
                 <a href="#main-section" className="hover:text-cyan-500">
@@ -58,10 +59,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-
           </div>
-
-
         </div>
 
         {/* Social Media Icons */}
@@ -77,7 +75,7 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Footer Bottom */}
+        {/* Footer Bottom Section */}
         <div className="border-t border-slate-700 mt-8 pt-4 text-center text-slate-500">
           <p>&copy; {new Date().getFullYear()} Your Brand. All rights reserved.</p>
         </div>
