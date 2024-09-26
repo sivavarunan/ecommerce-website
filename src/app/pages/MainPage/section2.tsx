@@ -57,35 +57,29 @@ const Section2 = () => {
     <div className="dark:bg-gradient-to-t from-slate-800 via-slate-900 to-slate-950 min-h-screen flex flex-col">
       {/* Heading */}
       <div className="text-center pt-12 pb-6">
-        <h1 className="text-5xl font-bold font-sans tracking-tight ">
+        <h1 className="text-5xl font-bold font-sans tracking-tight">
           Store
         </h1>
-        <p className="dark:text-slate-400 text-slate-600 mt-2 ">Explore our exclusive products</p>
+        <p className="dark:text-slate-400 text-slate-600 mt-2">
+          Explore our exclusive products
+        </p>
       </div>
 
       {/* Product Showcase */}
-      <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-grow">
+      <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row flex-grow">
         {/* Sidebar */}
-        <div className="w-1/4 h-full dark:text-white p-12">
+        <div className="w-full lg:w-1/4 h-full dark:text-white p-6 lg:p-12">
           <h2 className="text-3xl font-bold my-6">Categories</h2>
           <ul className="space-y-4">
             <li><a href="#" className="hover:text-gray-400">Category 1</a></li>
             <li><a href="#" className="hover:text-gray-400">Category 2</a></li>
             <li><a href="#" className="hover:text-gray-400">Category 3</a></li>
             <li><a href="#" className="hover:text-gray-400">Category 4</a></li>
-          </ul>
-          <h2 className="text-3xl font-bold my-6">Categories</h2>
-          <ul className="space-y-4">
-            <li><a href="#" className="hover:text-gray-400">Category 1</a></li>
-            <li><a href="#" className="hover:text-gray-400">Category 2</a></li>
-            <li><a href="#" className="hover:text-gray-400">Category 3</a></li>
-            <li><a href="#" className="hover:text-gray-400">Category 4</a></li>
-            <li><a href="#" className="hover:text-gray-400">Category 5</a></li>
           </ul>
         </div>
 
         {/* Products Grid */}
-        <div className="flex-1 p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex-1 p-4 lg:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
             <ProductCard
               key={product.id}
