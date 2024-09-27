@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { FaShoppingCart, FaSearch } from "react-icons/fa";
+import { FaShoppingCart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 
 const transition = {
   type: "spring",
@@ -43,19 +43,15 @@ export const MenuItem = ({
             <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
-                className="bg-cyan-300 bg-opacity-30 dark:bg-gradient-to-b from-cyan-700 via-cyan-800 to-cyan-950 backdrop-blur-lg rounded-2xl overflow-hidden  shadow-xl"
+                layoutId="active"
+                className="bg-cyan-300 bg-opacity-30 dark:bg-gradient-to-b from-cyan-700 via-cyan-800 to-cyan-950 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl"
               >
-                <motion.div
-                  layout // layout ensures smooth animation
-                  className="w-max h-full p-4"
-                >
+                <motion.div layout className="w-max h-full p-4">
                   {children}
                 </motion.div>
               </motion.div>
             </div>
           )}
-
         </motion.div>
       )}
     </div>
@@ -71,27 +67,49 @@ export const Menu = ({
   children: React.ReactNode;
 }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative flex items-center px-4 py-3 rounded-full shadow-xl shadow-cyan-950 backdrop-blur-lg"
-      style={{ background: 'linear-gradient(to top left, rgba(0, 139, 139, 0.4), rgba(0, 255, 255, 0.4))' }}
+      className="relative flex items-center justify-between px-4 py-3 rounded-full shadow-xl shadow-cyan-950 backdrop-blur-lg"
+      style={{
+        background:
+          'linear-gradient(to top left, rgba(0, 139, 139, 0.4), rgba(0, 255, 255, 0.4))',
+      }}
     >
       {/* Logo */}
-      <Link href="/" title="Logo" className="flex items-center space-x-2 bg-neutral-500 hover:bg-cyan-800 bg-opacity-60 shadow-lg rounded-2xl transform hover:scale-105 transition-transform px-2">
+      <Link
+        href="/"
+        title="Logo"
+        className="flex items-center space-x-2 bg-neutral-500 hover:bg-cyan-800 bg-opacity-60 shadow-lg rounded-2xl transform hover:scale-105 transition-transform px-2"
+      >
         <div className="flex-shrink-0">
-          <Image src="/screw.png" width={32} height={32} alt="Logo" className="rounded-full py-1" />
+          <Image
+            src="/screw.png"
+            width={32}
+            height={32}
+            alt="Logo"
+            className="rounded-full py-1"
+          />
         </div>
         <span className="text-black text-sm font-medium">Logo</span>
       </Link>
 
-      {/* Menu items */}
+      {/* Menu items for larger screens */}
       <div
-        className={`flex-grow flex items-center ml-20 justify-center space-x-4 transition-transform duration-300 ${isSearchOpen ? 'translate-x-[-40px]' : ''}`}
+        className={`hidden lg:flex flex-grow items-center ml-20 justify-center space-x-4 transition-transform duration-300`}
       >
         {children}
       </div>
+
+      {/* Mobile Menu Toggle Button */}
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="lg:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-cyan-400"
+      >
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
 
       {/* Search Bar and Cart Icon Container */}
       <div className="relative flex items-center space-x-2">
@@ -99,12 +117,13 @@ export const Menu = ({
         <div className="relative">
           <button
             onClick={() => setIsSearchOpen(!isSearchOpen)}
-            className="p-2 text-gray-700 dark:text-gray-300 hover:text-cyan-400 "
+            className="p-2 text-gray-700 dark:text-gray-300 hover:text-cyan-400"
           >
             <FaSearch />
           </button>
           <motion.div
-            className={`absolute right-0 top-full mt-2 transition-transform ${isSearchOpen ? 'w-96 opacity-100' : 'w-0 opacity-0'} `}
+            className={`absolute right-0 top-full mt-2 transition-transform ${isSearchOpen ? 'w-96 opacity-100' : 'w-0 opacity-0'
+              }`}
             initial={{ width: 0, opacity: 0 }}
             animate={{ width: isSearchOpen ? '24rem' : '0', opacity: isSearchOpen ? 1 : 0 }}
             transition={{ duration: 0.3 }}
@@ -130,6 +149,22 @@ export const Menu = ({
           Login
         </Link>
       </div>
+
+      {/* Mobile Menu Options */}
+      {isMenuOpen && (
+        <div className="absolute left-0 right-0 z-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg mt-2 lg:hidden">
+          <div className="flex flex-col p-4 space-y-2">
+            {React.Children.map(children, (child) => {
+              if (React.isValidElement(child)) {
+                return React.cloneElement(child, { });
+              }
+              return null;
+            })}
+
+
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
