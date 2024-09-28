@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { FaShoppingCart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { LinkProps } from "next/link"; // Import LinkProps type
 
 const transition = {
   type: "spring",
@@ -156,12 +157,10 @@ export const Menu = ({
           <div className="flex flex-col p-4 space-y-2">
             {React.Children.map(children, (child) => {
               if (React.isValidElement(child)) {
-                return React.cloneElement(child, { });
+                return React.cloneElement(child, {});
               }
               return null;
             })}
-
-
           </div>
         </div>
       )}
@@ -202,8 +201,11 @@ export const ProductItem = ({
   );
 };
 
-// HoveredLink Component
-export const HoveredLink = ({ children, ...rest }: any) => {
+// Updated HoveredLink Component with proper typing
+export const HoveredLink = ({
+  children,
+  ...rest
+}: LinkProps & React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   return (
     <Link
       {...rest}
