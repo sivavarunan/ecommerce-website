@@ -30,7 +30,7 @@ const Section5 = () => {
           <p className="text-base md:text-lg dark:text-slate-400 text-slate-700 max-w-md leading-relaxed">
             We are here to assist you. Whether you have questions, suggestions,
             or feedback, feel free to reach out to us. Our team is always happy
-            to help, and we'll get back to you as soon as we can.
+            to help, and we&apos;ll get back to you as soon as we can.
           </p>
           <p className="text-base md:text-lg dark:text-slate-400 text-slate-700 max-w-md leading-relaxed">
             You can also email us directly at{" "}
