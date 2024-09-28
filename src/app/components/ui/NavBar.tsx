@@ -20,9 +20,9 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Fast Delivery</HoveredLink>
-            <HoveredLink href="/interface-design">Secure Payment</HoveredLink>
-            <HoveredLink href="/seo">24/7 Customer Support</HoveredLink>
+            <HoveredLink href="/">Fast Delivery</HoveredLink>
+            <HoveredLink href="/">Secure Payment</HoveredLink>
+            <HoveredLink href="/">24/7 Customer Support</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Products">
@@ -53,12 +53,11 @@ function Navbar({ className }: { className?: string }) {
             />
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
+        <MenuItem setActive={setActive} active={active} item="Brands">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            <HoveredLink href="/">brand 1</HoveredLink>
+            <HoveredLink href="/">brand 2</HoveredLink>
+            <HoveredLink href="/">brand 3</HoveredLink>
           </div>
         </MenuItem>
       </Menu>
