@@ -154,6 +154,14 @@ export const Menu = ({
       {/* Mobile Menu Options */}
       {isMenuOpen && (
         <div className="absolute left-0 right-0 z-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg mt-2 lg:hidden">
+          {/* Mobile Menu Close Button */}
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="self-end p-2 text-gray-700 dark:text-gray-300 hover:text-cyan-400 flex justify-end"
+          >
+            <FaTimes />
+          </button>
+
           <div className="flex flex-col p-4 space-y-2">
             {React.Children.map(children, (child) => {
               if (React.isValidElement(child)) {
