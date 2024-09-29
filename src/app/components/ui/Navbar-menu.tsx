@@ -153,7 +153,7 @@ export const Menu = ({
 
       {/* Mobile Menu Options */}
       {isMenuOpen && (
-        <div className="absolute left-0 right-0 mt-20 z-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg  lg:hidden">
+        <div className="absolute left-0 right-0 mt-20 z-10 bg-white dark:bg-slate-800 rounded-lg shadow-lg  lg:hidden">
           {/* Mobile Menu Close Button */}
           <div className="flex justify-end p-2">
             <button
