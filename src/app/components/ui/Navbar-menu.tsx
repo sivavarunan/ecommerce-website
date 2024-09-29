@@ -157,7 +157,7 @@ export const Menu = ({
           {/* Mobile Menu Close Button */}
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="self-end p-2 text-gray-700 dark:text-gray-300 hover:text-cyan-400 flex justify-end"
+            className="self-end p-2 mt-10 text-gray-700 dark:text-gray-300 hover:text-cyan-400 flex justify-end"
           >
             <FaTimes />
           </button>
