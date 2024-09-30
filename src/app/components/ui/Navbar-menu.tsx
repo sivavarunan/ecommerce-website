@@ -144,7 +144,7 @@ export const Menu = ({
 
         {/* Login Button */}
         <Link
-          href="/login"
+          href="/pages/Login"
           className="px-4 py-1 bg-neutral-300 text-black rounded-full hover:bg-cyan-800 transition-all"
         >
           Login
