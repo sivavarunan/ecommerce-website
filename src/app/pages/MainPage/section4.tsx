@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Section4 = () => {
   // Animation Variants
@@ -24,11 +25,14 @@ const Section4 = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img
+          <Image
+            width={1200}
+            height={800}
             src="/photo7.png"
             alt="About Us"
             className="object-cover w-full h-full"
           />
+
         </motion.div>
 
         {/* Right Column: About Us Text with Title */}
