@@ -132,7 +132,7 @@ export const Menu = ({
             <input
               type="text"
               placeholder="Search..."
-              className="w-full p-2 right-8 bg-white bg-opacity-10 absolute bottom-1 rounded-full border-transparent focus:border-cyan-600 shadow-lg"
+              className="md:w-full w-40 p-2 right-8 bg-white bg-opacity-10 absolute bottom-1 rounded-full border-transparent focus:border-cyan-600 shadow-lg"
             />
           </motion.div>
         </div>
