@@ -14,11 +14,11 @@ export default function Signup() {
 
   return (
     <div className="flex items-center justify-center min-h-screen dark:bg-gradient-to-tr from-slate-950 via-slate-900 to-slate-800 bg-gray-50">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
+      <div className="w-full max-w-md p-8 space-y-6 bg-white dark:bg-opacity-25 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold text-center text-gray-900">Sign Up</h2>
         <form className="mt-8 space-y-6" onSubmit={handleSignup}>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm font-medium dark:text-slate-300 text-gray-700">
               Email address
             </label>
             <input
@@ -33,7 +33,7 @@ export default function Signup() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="password" className="block text-sm font-medium dark:text-slate-300 text-gray-700">
               Password
             </label>
             <input
@@ -47,7 +47,7 @@ export default function Signup() {
             />
           </div>
           <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="confirmPassword" className="block text-sm font-medium dark:text-slate-300 text-gray-700">
               Confirm Password
             </label>
             <input
