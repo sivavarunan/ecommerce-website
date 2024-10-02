@@ -107,7 +107,7 @@ export const Menu = ({
       {/* Mobile Menu Toggle Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="lg:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-cyan-400"
+        className="lg:hidden p-2 mr-20  text-gray-700 dark:text-gray-300 hover:text-cyan-400"
       >
         {isMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
@@ -132,7 +132,7 @@ export const Menu = ({
             <input
               type="text"
               placeholder="Search..."
-              className="md:w-full w-40 p-2 right-8 bg-white bg-opacity-10 absolute bottom-1 rounded-full border-transparent focus:border-cyan-600 shadow-lg"
+              className="md:w-full w-24 p-2 right-8 bg-white bg-opacity-10 absolute bottom-1 rounded-full border-transparent focus:border-cyan-600 shadow-lg"
             />
           </motion.div>
         </div>
