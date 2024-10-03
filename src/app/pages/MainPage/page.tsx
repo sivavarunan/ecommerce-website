@@ -39,15 +39,7 @@ const HomePage = () => {
             >
                 <ImageSliderComp />
             </motion.div>
-            <motion.div
-                id="shop-section"
-                variants={fadeIn}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-            >
                 <Section2 />
-            </motion.div>
             <div id="services-section">
                 <Section3 />
             </div>
