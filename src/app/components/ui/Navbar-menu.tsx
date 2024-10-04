@@ -138,7 +138,7 @@ export const Menu = ({
         </div>
 
         {/* Cart Icon */}
-        <Link href="/cart" className="text-gray-700 dark:text-gray-300 hover:text-cyan-400 p-2">
+        <Link href="/context/CardContext" className="text-gray-700 dark:text-gray-300 hover:text-cyan-400 p-2">
           <FaShoppingCart />
         </Link>
 
