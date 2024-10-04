@@ -1,16 +1,11 @@
 'use client';
 import React from "react";
 import { useCart } from "@/app/context/Cardcontext";
-import { useRouter } from 'next/navigation'; // Importing useRouter from next/navigation
+import { useRouter } from 'next/navigation';
 
 const CartPage = () => {
   const { cartItems, addToCart, removeFromCart } = useCart();
-  const router = useRouter(); // Initialize useRouter for navigation
-
-  const handleAddItem = () => {
-    const newItem = { id: Date.now(), name: "New Product", price: 100, quantity: 1 };
-    addToCart(newItem);
-  };
+  const router = useRouter();
 
   // Calculate the total price of all items in the cart
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -63,13 +58,13 @@ const CartPage = () => {
         </div>
       )}
 
-      {/* Bring Me to Checkout Button */}
+      {/*Checkout Button */}
       <div className="mt-6">
         <button
           onClick={handleCheckout} // Navigate to checkout
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
         >
-          Bring Me to Checkout
+          Checkout
         </button>
       </div>
     </div>
