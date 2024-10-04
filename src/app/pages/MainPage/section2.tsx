@@ -1,7 +1,11 @@
+'use client';
 import React from "react";
-import { ProductCard } from '@/app/components/ui/ProductCard';
+import { ProductCard } from "@/app/components/ui/ProductCard";
+import { useCart } from "@/app/context/Cardcontext";
 
 const Section2 = () => {
+  const { addToCart } = useCart();
+
   const products = [
     {
       id: 1,
@@ -87,6 +91,14 @@ const Section2 = () => {
               title={product.title}
               description={product.description}
               price={product.price}
+              onAddToCart={() =>
+                addToCart({
+                  id: product.id,
+                  name: product.title,
+                  price: parseFloat(product.price.replace("$", "")),
+                  quantity: 1,
+                })
+              }
             />
           ))}
         </div>
