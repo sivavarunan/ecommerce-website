@@ -1,9 +1,11 @@
 'use client';
 import React from "react";
 import { useCart } from "@/app/context/Cardcontext";
+import { useRouter } from 'next/navigation'; // Importing useRouter from next/navigation
 
 const CartPage = () => {
   const { cartItems, addToCart, removeFromCart } = useCart();
+  const router = useRouter(); // Initialize useRouter for navigation
 
   const handleAddItem = () => {
     const newItem = { id: Date.now(), name: "New Product", price: 100, quantity: 1 };
@@ -12,6 +14,11 @@ const CartPage = () => {
 
   // Calculate the total price of all items in the cart
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
+  const handleCheckout = () => {
+    // Navigate to checkout page
+    router.push('/checkout'); // Adjust the path to your checkout page
+  };
 
   return (
     <div className="container mx-auto p-6">
@@ -34,7 +41,7 @@ const CartPage = () => {
                       type="number"
                       value={item.quantity}
                       min={1}
-                      onChange={(e) => addToCart({ ...item, quantity: parseInt(e.target.value, 10) })}
+                      onChange={(e) => addToCart({ ...item, quantity: parseInt(e.target.value, 10) })} // Update quantity correctly
                       className="w-12 p-1 border rounded"
                     />
                   </div>
@@ -56,12 +63,13 @@ const CartPage = () => {
         </div>
       )}
 
+      {/* Bring Me to Checkout Button */}
       <div className="mt-6">
         <button
-          onClick={handleAddItem}
+          onClick={handleCheckout} // Navigate to checkout
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
         >
-          Add New Product
+          Bring Me to Checkout
         </button>
       </div>
     </div>
