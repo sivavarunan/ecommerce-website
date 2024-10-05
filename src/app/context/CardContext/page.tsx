@@ -1,6 +1,7 @@
 'use client';
 import React from "react";
 import { useCart } from "@/app/context/Cardcontext";
+import { FaTrash} from "react-icons/fa";
 import { useRouter } from 'next/navigation'; 
 
 const CartPage = () => {
@@ -43,10 +44,10 @@ const CartPage = () => {
                 </div>
                 <button
                   onClick={() => removeFromCart(item.id)}
-                  className="text-red-500 hover:text-red-700 transition"
+                  className="text-red-500 hover:text-red-900 transition"
                   aria-label={`Remove ${item.name} from cart`}
                 >
-                  Remove
+                  <FaTrash/>
                 </button>
               </li>
             ))}
