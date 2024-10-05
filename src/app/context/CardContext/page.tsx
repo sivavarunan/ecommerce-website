@@ -26,7 +26,7 @@ const CartPage = () => {
         <div className="space-y-4">
           <ul className="space-y-2">
             {cartItems.map((item) => (
-              <li key={item.id} className="flex items-center justify-between p-4 border rounded shadow-sm">
+              <li key={item.id} className="flex items-center bg-slate-900 justify-between p-4 border-4 rounded-xl shadow-sm">
                 <div>
                   <h2 className="text-lg font-medium">{item.name}</h2>
                   <p className="text-gray-500">Price: ${item.price}</p>
@@ -37,7 +37,7 @@ const CartPage = () => {
                       value={item.quantity}
                       min={1}
                       onChange={(e) => addToCart({ ...item, quantity: parseInt(e.target.value, 10) })} // Update quantity correctly
-                      className="w-12 p-1 border rounded bg-slate-500 text-black"
+                      className="w-12 px-2 border rounded-lg bg-slate-500 text-black"
                     />
                   </div>
                 </div>
