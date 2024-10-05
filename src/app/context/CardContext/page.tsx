@@ -1,11 +1,11 @@
 'use client';
 import React from "react";
 import { useCart } from "@/app/context/Cardcontext";
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'; 
 
 const CartPage = () => {
   const { cartItems, addToCart, removeFromCart } = useCart();
-  const router = useRouter();
+  const router = useRouter(); 
 
   // Calculate the total price of all items in the cart
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -37,7 +37,7 @@ const CartPage = () => {
                       value={item.quantity}
                       min={1}
                       onChange={(e) => addToCart({ ...item, quantity: parseInt(e.target.value, 10) })} // Update quantity correctly
-                      className="w-12 p-1 border rounded"
+                      className="w-12 p-1 border rounded bg-slate-500 text-black"
                     />
                   </div>
                 </div>
@@ -64,7 +64,7 @@ const CartPage = () => {
           onClick={handleCheckout} // Navigate to checkout
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
         >
-          Checkout
+        Checkout
         </button>
       </div>
     </div>
