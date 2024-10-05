@@ -17,7 +17,7 @@ const CartPage = () => {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="p-6 dark:bg-gradient-to-tr from-slate-700 via-slate-800 to-slate-900">
       <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
 
       {/* Conditional rendering: if cart is empty, display a message */}
@@ -63,7 +63,7 @@ const CartPage = () => {
       <div className="mt-6">
         <button
           onClick={handleCheckout} // Navigate to checkout
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+          className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-900 transition"
         >
         Checkout
         </button>
