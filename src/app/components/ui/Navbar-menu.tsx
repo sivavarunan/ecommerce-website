@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { FaShoppingCart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { useCart } from "@/app/context/Cardcontext"; // 
 import { LinkProps } from "next/link"; // Import LinkProps type
 
 const transition = {
@@ -59,7 +60,6 @@ export const MenuItem = ({
   );
 };
 
-// Menu Component with Logo and Login Button
 export const Menu = ({
   setActive,
   children,
@@ -69,6 +69,8 @@ export const Menu = ({
 }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { cartItems } = useCart(); // Get the cart items
+  const totalItemsInCart = cartItems.reduce((acc, item) => acc + item.quantity, 0); // Calculate total quantity
 
   return (
     <nav
@@ -137,9 +139,14 @@ export const Menu = ({
           </motion.div>
         </div>
 
-        {/* Cart Icon */}
-        <Link href="/context/CardContext" className="text-gray-700 dark:text-gray-300 hover:text-cyan-400 p-2">
+        {/* Cart Icon with Item Indicator */}
+        <Link href="/context/CardContext" className="relative text-gray-700 dark:text-gray-300 hover:text-cyan-400 p-2">
           <FaShoppingCart />
+          {totalItemsInCart > 0 && (
+            <span className="absolute -top-1 -right-1 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-cyan-500 rounded-full">
+              {totalItemsInCart}
+            </span>
+          )}
         </Link>
 
         {/* Login Button */}
@@ -175,7 +182,7 @@ export const Menu = ({
       )}
     </nav>
   );
-};
+};  
 
 // ProductItem Component
 export const ProductItem = ({
