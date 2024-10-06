@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from "react";
 import { NavbarComponent } from "@/app/components/ui/NavBar";
 import Section2 from "./section2";
@@ -17,10 +17,9 @@ const HomePage = () => {
     };
 
     return (
-        <div>
-            <div>
-                <NavbarComponent />
-            </div>
+       
+        <div >
+            <NavbarComponent />
             <motion.div
                 id="main-section"
                 variants={fadeIn}
@@ -39,7 +38,7 @@ const HomePage = () => {
             >
                 <ImageSliderComp />
             </motion.div>
-                <Section2 />
+            <Section2 />
             <div id="services-section">
                 <Section3 />
             </div>
@@ -49,10 +48,9 @@ const HomePage = () => {
             <div id="contact-section">
                 <Section5 />
             </div>
-            <div>
-                <Footer />
-            </div>
+            <Footer />
         </div>
+    
     );
 };
 
