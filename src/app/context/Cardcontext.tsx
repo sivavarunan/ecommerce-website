@@ -11,7 +11,7 @@ type CartItem = {
 type CartContextType = {
   cartItems: CartItem[];
   addToCart: (item: CartItem) => void;
-  updateCartItemQuantity: (id: number, quantity: number) => void; 
+  updateCartItemQuantity: (id: number, quantity: number) => void;
   removeFromCart: (id: number) => void;
 };
 

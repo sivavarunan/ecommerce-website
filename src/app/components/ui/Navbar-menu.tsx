@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { FaShoppingCart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
-import { useCart } from "@/app/context/Cardcontext"; 
-import { LinkProps } from "next/link"; 
+import { useCart } from "@/app/context/Cardcontext";
+import { LinkProps } from "next/link";
 
 const transition = {
   type: "spring",
@@ -69,8 +69,8 @@ export const Menu = ({
 }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { cartItems } = useCart(); 
-  const totalItemsInCart = cartItems.reduce((acc, item) => acc + item.quantity, 0); 
+  const { cartItems } = useCart();
+  const totalItemsInCart = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <nav
@@ -182,7 +182,7 @@ export const Menu = ({
       )}
     </nav>
   );
-};  
+};
 
 // ProductItem Component
 export const ProductItem = ({

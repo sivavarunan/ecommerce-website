@@ -2,11 +2,11 @@
 import React from "react";
 import { useCart } from "@/app/context/Cardcontext";
 import { FaTrash } from "react-icons/fa";
-import { useRouter } from 'next/navigation'; 
+import { useRouter } from 'next/navigation';
 
 const CartPage = () => {
   const { cartItems, updateCartItemQuantity, removeFromCart } = useCart();
-  const router = useRouter(); 
+  const router = useRouter();
 
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
@@ -20,7 +20,7 @@ const CartPage = () => {
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-100">Your Cart</h1>
 
 
-        <div className="flex-grow overflow-y-auto max-h-96 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"> 
+        <div className="flex-grow overflow-y-auto max-h-96 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
           {cartItems.length === 0 ? (
             <p className="text-gray-400 text-center">Your cart is empty. Start adding items to your cart!</p>
           ) : (
@@ -37,7 +37,7 @@ const CartPage = () => {
                           type="number"
                           value={item.quantity}
                           min={1}
-                          onChange={(e) => updateCartItemQuantity(item.id, parseInt(e.target.value, 10))} 
+                          onChange={(e) => updateCartItemQuantity(item.id, parseInt(e.target.value, 10))}
                           className="max-w-[60px] w-full px-2 py-1 border border-gray-600 rounded-md bg-slate-700 text-gray-100 transition duration-150 ease-in-out focus:outline-none focus:ring focus:ring-cyan-600"
                         />
                       </div>
@@ -64,7 +64,7 @@ const CartPage = () => {
           >
             Checkout
           </button>
-    
+
           <button
             onClick={() => router.back()}
             className="w-full mt-4 bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition duration-200 shadow-md hover:shadow-lg"
