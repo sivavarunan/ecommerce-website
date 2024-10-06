@@ -1,26 +1,24 @@
 'use client';
 import React from "react";
 import { useCart } from "@/app/context/Cardcontext";
-import { FaTrash} from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 import { useRouter } from 'next/navigation'; 
 
 const CartPage = () => {
-  const { cartItems, addToCart, removeFromCart } = useCart();
+  const { cartItems, updateCartItemQuantity, removeFromCart } = useCart();
   const router = useRouter(); 
 
   // Calculate the total price of all items in the cart
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   const handleCheckout = () => {
-    // Navigate to checkout page
-    router.push('/checkout'); // Adjust the path to your checkout page
+    router.push('/checkout');
   };
 
   return (
     <div className="p-6 dark:bg-gradient-to-tr from-slate-700 via-slate-800 to-slate-900">
       <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
 
-      {/* Conditional rendering: if cart is empty, display a message */}
       {cartItems.length === 0 ? (
         <p className="text-gray-600">Your cart is empty. Start adding items to your cart!</p>
       ) : (
@@ -37,8 +35,8 @@ const CartPage = () => {
                       type="number"
                       value={item.quantity}
                       min={1}
-                      onChange={(e) => addToCart({ ...item, quantity: parseInt(e.target.value, 10) })} // Update quantity correctly
-                      className="w-12 px-2 border rounded-lg bg-slate-500 text-black"
+                      onChange={(e) => updateCartItemQuantity(item.id, parseInt(e.target.value, 10))} 
+                      className="w-12 px-1 border rounded-full bg-slate-500 text-black"
                     />
                   </div>
                 </div>
@@ -47,7 +45,7 @@ const CartPage = () => {
                   className="text-red-500 hover:text-red-900 transition"
                   aria-label={`Remove ${item.name} from cart`}
                 >
-                  <FaTrash/>
+                  <FaTrash />
                 </button>
               </li>
             ))}
@@ -59,13 +57,12 @@ const CartPage = () => {
         </div>
       )}
 
-      {/*Checkout Button */}
       <div className="mt-6">
         <button
-          onClick={handleCheckout} // Navigate to checkout
+          onClick={handleCheckout}
           className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-900 transition"
         >
-        Checkout
+          Checkout
         </button>
       </div>
     </div>
