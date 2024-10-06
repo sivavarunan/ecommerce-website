@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 type CartItem = {
@@ -28,7 +28,21 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   const addToCart = (item: CartItem) => {
-    setCartItems((prevItems) => [...prevItems, item]);
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find(cartItem => cartItem.id === item.id);
+
+      if (existingItem) {
+        // If the item already exists in the cart, update the quantity
+        return prevItems.map(cartItem =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+            : cartItem
+        );
+      } else {
+        // Otherwise, add the new item to the cart
+        return [...prevItems, item];
+      }
+    });
   };
 
   const removeFromCart = (id: number) => {

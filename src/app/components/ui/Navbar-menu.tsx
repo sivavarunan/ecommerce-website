@@ -218,7 +218,7 @@ export const HoveredLink = ({
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black"
+      className="text-neutral-700 dark:text-neutral-200 hover:text-black focus:text-cyan-400 active:text-cyan-600 transition-colors duration-300 lg:hover:text-black"
     >
       {children}
     </Link>
