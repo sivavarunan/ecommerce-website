@@ -21,7 +21,7 @@ const CartPage = () => {
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-100">Your Cart</h1>
 
         {/* Scrollable area for cart items */}
-        <div className="flex-grow overflow-y-auto max-h-96"> 
+        <div className="flex-grow overflow-y-auto max-h-96 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"> 
           {cartItems.length === 0 ? (
             <p className="text-gray-400 text-center">Your cart is empty. Start adding items to your cart!</p>
           ) : (
