@@ -11,7 +11,7 @@ type CartItem = {
 type CartContextType = {
   cartItems: CartItem[];
   addToCart: (item: CartItem) => void;
-  updateCartItemQuantity: (id: number, quantity: number) => void; // Adjusted to update quantity directly
+  updateCartItemQuantity: (id: number, quantity: number) => void; 
   removeFromCart: (id: number) => void;
 };
 
@@ -33,21 +33,18 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       const existingItem = prevItems.find(cartItem => cartItem.id === item.id);
 
       if (existingItem) {
-        // If item exists, update the quantity by adding the new quantity
         return prevItems.map(cartItem =>
           cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
             : cartItem
         );
       } else {
-        // If item doesn't exist, add it to the cart
         return [...prevItems, item];
       }
     });
   };
 
   const updateCartItemQuantity = (id: number, quantity: number) => {
-    // Update item quantity without adding to it, just set it
     setCartItems((prevItems) =>
       prevItems.map(cartItem =>
         cartItem.id === id ? { ...cartItem, quantity } : cartItem

@@ -8,7 +8,7 @@ interface ProductCardProps {
   title: string;
   description: string;
   price: string;
-  onAddToCart: () => void;  // Add this prop
+  onAddToCart: () => void;
 }
 
 export function ProductCard({
@@ -16,7 +16,7 @@ export function ProductCard({
   title,
   description,
   price,
-  onAddToCart,  // Destructure the new prop
+  onAddToCart,  
 }: ProductCardProps) {
   return (
     <BackgroundGradient className="rounded-[22px] w-auto h-full p-4 bg-white dark:bg-slate-950 dark:bg-opacity-90">
@@ -36,7 +36,7 @@ export function ProductCard({
         {description}
       </p>
       <button
-        onClick={onAddToCart}  // Use the onAddToCart prop
+        onClick={onAddToCart} 
         className="rounded-full px-3 py-1 text-white bg-black mt-2 text-xs font-bold dark:bg-slate-800"
       >
         Buy now - {price}
