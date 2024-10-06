@@ -8,7 +8,7 @@ const CartPage = () => {
   const { cartItems, updateCartItemQuantity, removeFromCart } = useCart();
   const router = useRouter(); 
 
-  // Calculate the total price of all items in the cart
+
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   const handleCheckout = () => {
@@ -20,7 +20,7 @@ const CartPage = () => {
       <div className="w-full max-w-lg p-6 bg-slate-900 rounded-lg shadow-lg flex flex-col">
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-100">Your Cart</h1>
 
-        {/* Scrollable area for cart items */}
+ 
         <div className="flex-grow overflow-y-auto max-h-96 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"> 
           {cartItems.length === 0 ? (
             <p className="text-gray-400 text-center">Your cart is empty. Start adding items to your cart!</p>
@@ -57,7 +57,7 @@ const CartPage = () => {
           )}
         </div>
 
-        {/* Fixed area for total and checkout button */}
+     
         <div className="mt-6 bg-slate-800 p-4 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold text-gray-100">Total: ${totalPrice.toFixed(2)}</h3>
           <button
@@ -65,6 +65,13 @@ const CartPage = () => {
             className="w-full bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-200 shadow-md hover:shadow-lg mt-4"
           >
             Checkout
+          </button>
+    
+          <button
+            onClick={() => router.back()}
+            className="w-full mt-4 bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition duration-200 shadow-md hover:shadow-lg"
+          >
+            Back
           </button>
         </div>
       </div>
