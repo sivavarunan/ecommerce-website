@@ -13,7 +13,7 @@ export default function Login() {
 
   return (
     <div className="flex items-center justify-center min-h-screen dark:bg-gradient-to-tr from-slate-950 via-slate-900 to-slate-800 bg-gray-50">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white dark:bg-opacity-25 rounded-2xl shadow-lg">
+      <div className="w-96 h-5/6 p-6 space-y-6 bg-slate-300 dark:bg-opacity-20 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-bold text-center text-gray-900">Login</h2>
         <form className="mt-8 space-y-6" onSubmit={handleLogin}>
           <div>
