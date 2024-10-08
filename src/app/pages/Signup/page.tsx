@@ -14,7 +14,7 @@ export default function Signup() {
 
   return (
     <div className="flex items-center justify-center min-h-screen dark:bg-gradient-to-tr from-slate-950 via-slate-900 to-slate-800 bg-gray-50">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white dark:bg-opacity-25 rounded-lg shadow-lg">
+      <div className="w-96 h-5/6 p-6 space-y-6 bg-slate-300 bg-opacity-20 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold text-center text-gray-900">Sign Up</h2>
         <form className="mt-8 space-y-6" onSubmit={handleSignup}>
           <div>
@@ -29,7 +29,7 @@ export default function Signup() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full px-3 py-2 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
+              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
             />
           </div>
           <div>
@@ -43,7 +43,7 @@ export default function Signup() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="block w-full px-3 py-2 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
+              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
             />
           </div>
           <div>
@@ -57,7 +57,7 @@ export default function Signup() {
               required
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="block w-full px-3 py-2 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
+              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
             />
           </div>
           <div>
