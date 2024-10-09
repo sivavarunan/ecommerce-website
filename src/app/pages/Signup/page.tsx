@@ -9,7 +9,6 @@ export default function Signup() {
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle signup logic here
   };
 
   return (

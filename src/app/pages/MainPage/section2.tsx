@@ -72,7 +72,7 @@ const Section2 = () => {
       {/* Product Showcase */}
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row flex-grow">
         {/* Sidebar */}
-        <div className="w-full lg:w-1/4 h-full dark:text-white p-6 lg:p-12">
+        <div className="w-full lg:w-1/4 h-full dark:text-white p-6 lg:p-12 font-sans">
           <h2 className="text-3xl font-bold my-6">Categories</h2>
           <ul className="space-y-4">
             <li><a href="#" className="hover:text-gray-400">Category 1</a></li>
@@ -80,6 +80,16 @@ const Section2 = () => {
             <li><a href="#" className="hover:text-gray-400">Category 3</a></li>
             <li><a href="#" className="hover:text-gray-400">Category 4</a></li>
           </ul>
+          <h2 className="text-3xl font-bold my-6">Categories</h2>
+          <ul className="space-y-4">
+            <li><a href="#" className="hover:text-gray-400">Category 1</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 2</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 3</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 4</a></li>
+            <li><a href="#" className="hover:text-gray-400">Category 5</a></li>
+          </ul>
+
+          
         </div>
 
         {/* Products Grid */}
