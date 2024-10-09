@@ -144,6 +144,7 @@ export const Menu = ({
             transition={{ duration: 0.3 }}
           >
             <input
+             onSubmit={handleSearch}
               type="text"
               placeholder="Search..."
               className="md:w-full w-24 p-2 right-8 bg-white bg-opacity-10 absolute bottom-1 rounded-full border-transparent focus:border-cyan-600 shadow-lg"
