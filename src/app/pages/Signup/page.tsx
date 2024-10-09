@@ -29,7 +29,7 @@ export default function Signup() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
+              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-cyan-300 bg-opacity-10 border-0 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
             />
           </div>
           <div>
@@ -43,7 +43,7 @@ export default function Signup() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
+              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-cyan-300 bg-opacity-10 border-0 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
             />
           </div>
           <div>
@@ -57,19 +57,19 @@ export default function Signup() {
               required
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-gray-100 border rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
+              className="block w-full px-3 py-1 mt-1 text-gray-900 bg-cyan-300 bg-opacity-10 border-0 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"
             />
           </div>
           <div>
             <button
               type="submit"
-              className="w-full px-4 py-2 text-sm font-medium text-white bg-cyan-600 rounded-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+              className="w-full px-4 py-2 text-sm font-medium text-white bg-cyan-500 rounded-lg hover:bg-cyan-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
             >
               Sign Up
             </button>
           </div>
           <div className="text-center">
-            <Link href="/pages/Login" className="text-cyan-600 hover:text-cyan-700">
+            <Link href="/pages/Login" className="text-cyan-500 hover:text-cyan-700">
               Already have an account? Login
             </Link>
           </div>

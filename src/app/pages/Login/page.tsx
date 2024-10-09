@@ -48,13 +48,13 @@ export default function Login() {
           <div>
             <button
               type="submit"
-              className="w-full px-4 py-2 text-sm font-medium text-white bg-cyan-600 rounded-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+              className="w-full px-4 py-2 text-sm font-medium text-white bg-cyan-500 rounded-lg hover:bg-cyan-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
             >
               Sign In
             </button>
           </div>
           <div className="text-center">
-            <Link href="/pages/Signup" className="text-cyan-600 hover:text-cyan-700">
+            <Link href="/pages/Signup" className="text-cyan-500 hover:text-cyan-700">
               Don&apos;t have an account? Sign Up
             </Link>
           </div>
