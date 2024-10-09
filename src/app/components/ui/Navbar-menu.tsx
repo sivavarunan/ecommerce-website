@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaShoppingCart, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { useCart } from "@/app/context/Cardcontext";
 import { LinkProps } from "next/link";
+import { useRouter } from "next/navigation";
 
 const transition = {
   type: "spring",
@@ -71,6 +72,17 @@ export const Menu = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { cartItems } = useCart();
   const totalItemsInCart = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim() !== "") {
+      router.push(`/search?query=${searchQuery}`);
+    }
+  };
+
 
   return (
     <nav
