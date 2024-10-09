@@ -143,12 +143,16 @@ export const Menu = ({
             animate={{ width: isSearchOpen ? '24rem' : '0', opacity: isSearchOpen ? 1 : 0 }}
             transition={{ duration: 0.3 }}
           >
+            <form onSubmit={handleSearch}>
             <input
-             onSubmit={handleSearch}
+      
               type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search..."
               className="md:w-full w-24 p-2 right-8 bg-white bg-opacity-10 absolute bottom-1 rounded-full border-transparent focus:border-cyan-600 shadow-lg"
             />
+            </form>
           </motion.div>
         </div>
 
