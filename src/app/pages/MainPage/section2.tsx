@@ -10,49 +10,49 @@ const Section2 = () => {
     {
       id: 1,
       imageSrc: "/desktop3.png",
-      title: "Air Jordan 4 Retro",
+      title: "pc 1",
       description:
-        "The Air Jordan 4 Retro Reimagined Bred will release on February 17, 2024. Enter raffles and wait for official releases.",
+        "The pc 1 Retro Reimagined Bred will release on February 17, 2024. Enter raffles and wait for official releases.",
       price: "$100",
     },
     {
       id: 2,
       imageSrc: "/desktop2.png",
-      title: "Air Jordan 1 High OG",
+      title: "pc classic",
       description:
-        "A classic silhouette that never goes out of style. Grab your pair of the timeless Air Jordan 1.",
+        "A classic silhouette that never goes out of style.",
       price: "$120",
     },
     {
       id: 3,
       imageSrc: "/desktop4.png",
-      title: "Air Jordan 11 Retro",
+      title: "pc retro",
       description:
-        "The Air Jordan 11 Retro continues to shine with its patent leather and timeless design.",
+        "The pc Retro continues to shine with its patent leather and timeless design.",
       price: "$150",
     },
     {
       id: 4,
       imageSrc: "/desktop2.png",
-      title: "Air Jordan 3 Retro",
+      title: "pc 2",
       description:
-        "The Air Jordan 3 is a combination of classic style and modern comfort. Get yours before they sell out.",
+        "The pc 2 is a combination of classic style and modern comfort. Get yours before they sell out.",
       price: "$130",
     },
     {
       id: 5,
       imageSrc: "/desktop4.png",
-      title: "Air Jordan 6 Retro",
+      title: "the pc",
       description:
-        "The Air Jordan 6 offers a sleek design that combines style with performance. A must-have for collectors.",
+        "The pc offers a sleek design that combines style with performance. A must-have for collectors.",
       price: "$140",
     },
     {
       id: 6,
       imageSrc: "/desktop3.png",
-      title: "Air Jordan 5 Retro",
+      title: "pc remaster",
       description:
-        "The Air Jordan 5 Retro continues to be a favorite for its timeless design and great cushioning.",
+        "The Pc Remaster continues to be a favorite for its timeless design and great cushioning.",
       price: "$160",
     },
   ];
